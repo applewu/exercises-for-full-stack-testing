@@ -10,6 +10,7 @@ import static org.hamcrest.core.IsNot.not;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -35,7 +36,11 @@ public class WebsiteTest {
     @Before
     public void setUp() {
 //        driver = new FirefoxDriver();
-        driver = new ChromeDriver();
+
+        ChromeOptions options=new ChromeOptions();
+        options.addArguments("--remote-allow-origins=*");
+
+        driver = new ChromeDriver(options);
         js = (JavascriptExecutor) driver;
         vars = new HashMap<String, Object>();
     }

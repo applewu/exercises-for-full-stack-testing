@@ -1,0 +1,6 @@
+selenium
+
+# 注意看 release history（https://pypi.org/project/chromedriver-py/#history）
+# chromedriver-py 下载版本与执行环境的 chrome 浏览器版本有关
+# 比如 chromedriver-py 版本 113.0.5672.24 不支持 chrome 浏览器版本 112
+chromedriver-py==112.0.5615.49
